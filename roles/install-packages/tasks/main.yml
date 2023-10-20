@@ -1,6 +1,6 @@
 - name: Install required packages
   become: true
-  apt:
+  package:
     update_cache: true
     name:
       - gdisk
@@ -8,16 +8,18 @@
       - dosfstools
       - e2fsprogs
       - gnupg
-      - qemu-utils
+      #- qemu-utils
       - python3-lxml
-      - grub-efi-amd64
-      - grub-efi-amd64-bin
-      - grub-common
-      - isolinux
+      #- grub-efi-amd64
+      #- grub-efi-amd64-bin
+      #- grub-common
+      #- isolinux
+      - syslinux
       - python3-requests
       - rsync
       - unzip
-      - zlib1g-dev
+      #- zlib1g-dev
+      - zlib-devel
       - squashfs-tools
       - xorriso
     state: present

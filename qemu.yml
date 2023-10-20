@@ -16,7 +16,7 @@
             name: '{{ roleinputvar }}'
           loop:
             - install-packages
-            - download-iso
+            #- download-iso
             - mount-iso
             - get-version
             - create-disk
